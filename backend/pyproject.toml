@@ -1,0 +1,25 @@
+[project]
+name = "gst-notice-explainer-backend"
+version = "0.1.0"
+description = "Backend for the GST/tax-notice explainer (Razorpay buildathon)."
+requires-python = ">=3.11"
+dependencies = [
+    "fastapi>=0.115",
+    "uvicorn[standard]>=0.30",
+    "python-multipart>=0.0.9",
+    "supabase>=2.6",
+    "psycopg[binary]>=3.2",
+    "psycopg-pool>=3.2",
+    "python-dotenv>=1.0",
+    "pdfplumber>=0.11",
+    "pytesseract>=0.3.13",
+    "Pillow>=10.0",
+    "reportlab>=4.0",
+    "groq>=0.11.0",
+    "google-genai>=1.0.0",
+    "sentence-transformers>=3.0.0",
+    "httpx>=0.27",
+]
+
+[tool.uv]
+package = false

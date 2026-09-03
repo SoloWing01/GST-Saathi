@@ -1,0 +1,85 @@
+/* ============================================================
+   GST Notice Explainer — Warm & Human design
+   ------------------------------------------------------------
+   The single, permanent visual identity: soft cream paper, a
+   warm terracotta accent, and a friendly Fraunces display face
+   paired with Plus Jakarta Sans body. The semantic token set
+   (--color-*) recolors the whole application; font mapping
+   applies the typographic voice. Readability stays high for
+   anxious small merchants — warm, human, reassuring.
+
+   These values override the neutral defaults in globals.css
+   because this stylesheet is imported after it. The `.dark`
+   block ships the deep warm palette for dark mode.
+   ============================================================ */
+
+/* Typographic voice — display headings in a soft human serif,
+   body copy in a friendly rounded grotesque. */
+:root {
+  --font-sans: var(--font-jakarta);
+  --font-display: var(--font-fraunces);
+}
+.font-display {
+  font-weight: 520;
+  letter-spacing: -0.015em;
+}
+
+/* Light palette — soft cream paper, warm terracotta. */
+:root {
+  --color-ground: #fbf4e9;
+  --color-ground-warm: #f4ead9;
+  --color-surface: #fffdf8;
+  --color-surface-raised: #fdf7ec;
+  --color-ink: #2b211b;
+  --color-ink-muted: #6b5d4f;
+  --color-ink-faint: #a99a88;
+  --color-border: #e9decd;
+  --color-border-strong: #d9c9b2;
+
+  --color-accent: #bf4d2c;
+  --color-accent-light: #fbe8dd;
+  --color-accent-dark: #9c3b1f;
+  --color-accent-foreground: #fff8f2;
+
+  --color-success: #3f7d4e;
+  --color-success-light: #e6f2e8;
+
+  --color-caution: #c07a12;
+  --color-caution-light: #fbf0d8;
+  --color-caution-border: #e7bd6e;
+
+  --color-danger: #c23a34;
+  --color-danger-light: #fae6e4;
+  --color-danger-border: #e08a86;
+}
+
+/* Dark palette — deep warm brown-black, warm coral accent. */
+.dark {
+  --color-ground: #1a1410;
+  --color-ground-warm: #221b14;
+  --color-surface: #241c15;
+  --color-surface-raised: #2b221a;
+  --color-ink: #f4e9db;
+  --color-ink-muted: #b7a692;
+  --color-ink-faint: #83705d;
+  --color-border: #3a2e23;
+  --color-border-strong: #4a3c2d;
+
+  --color-accent: #e0835a;
+  --color-accent-light: #3a241a;
+  --color-accent-dark: #ef9f78;
+  --color-accent-foreground: #2b150c;
+
+  --color-success: #78b48a;
+  --color-success-light: #1e2f22;
+
+  --color-caution: #e2b064;
+  --color-caution-light: #33270f;
+  --color-caution-border: #8a6c30;
+
+  --color-danger: #e47a72;
+  --color-danger-light: #3a1c1a;
+  --color-danger-border: #8a4a45;
+
+  color-scheme: dark;
+}

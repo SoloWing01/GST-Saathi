@@ -1,0 +1,35 @@
+SHOW CAUSE NOTICE
+Section 16(2)(d) of the CGST Act, 2017
+
+Reference: REG-17/2025-26/009012
+Date: 05-Mar-2025
+
+To: M/S SUNRISE RETAILERS
+GSTIN: 24CCCDR5678M1Z3
+PAN: CCDR5678M
+
+Subject: Denial of Input Tax Credit - Rule 36(4) violation
+
+Dear Sir/Madam,
+
+It has been noticed that you have availed Input Tax Credit in excess of
+what is permissible under Rule 36(4) of the CGST Rules, 2018.
+
+Details:
+- Total ITC available in GSTR-2B: Rs. 5,20,000
+- ITC claimed in GSTR-3B:         Rs. 5,85,000
+- Excess ITC availed:             Rs.   65,000
+- Tax period: September 2024
+
+As per Rule 36(4), ITC claims cannot exceed 105% of the eligible credit
+available in GSTR-2B. The excess amount of Rs. 65,000 is being denied.
+
+You are directed to show cause within 30 days as to why:
+1. The excess ITC of Rs. 65,000 should not be reversed
+2. Interest under Section 50 should not be charged
+3. Penalty under Section 122 should not be imposed
+
+Failure to respond will result in ex-parte proceedings.
+
+Assistant Commissioner
+GST Division: Ahmedabad-I
