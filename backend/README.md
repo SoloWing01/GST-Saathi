@@ -3,10 +3,17 @@ title: GST Saathi
 emoji: 🧾
 colorFrom: teal
 colorTo: gray
-sdk: docker
+sdk: python
 pinned: false
 app_port: 7860
 ---
+
+## How to run
+
+```bash
+pip install -r requirements.txt
+python app.py
+```
 
 # GST Saathi — Backend
 

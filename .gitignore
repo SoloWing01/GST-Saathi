@@ -1,0 +1,31 @@
+# Secrets — never commit
+.env
+.env.local
+.env.example
+backend/.env
+*.pem
+
+# Python
+__pycache__/
+*.py[cod]
+.venv/
+.pytest_cache/
+.mypy_cache/
+.ruff_cache/
+backend/test_results.json
+
+# Node / Next.js
+node_modules/
+.next/
+out/
+npm-debug.log*
+
+# OS
+.DS_Store
+.agents
+.claude
+.codex
+.impeccable
+GEMINI.md
+skills-lock.json
+.vscode

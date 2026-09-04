@@ -43,7 +43,7 @@ Frontend (Next.js)  →  Backend (FastAPI)  →  Supabase (Postgres + pgvector +
 | Layer | Tech | Hosting |
 |-------|------|---------|
 | Frontend | Next.js, React 19, Tailwind CSS v4 | Vercel (free) |
-| Backend | Python 3.11, FastAPI, uvicorn | HuggingFace Spaces (free, Docker) |
+| Backend | Python 3.11, FastAPI, uvicorn | HuggingFace Spaces (free, Python SDK) |
 | Database | Supabase Postgres + pgvector | Supabase (free tier) |
 | Storage | Supabase Storage | Supabase (free tier) |
 | LLM | Groq free tier (primary), Gemini free tier (fallback) | — |
@@ -181,7 +181,42 @@ That's it — your own database is ready.
 | `GET` | `/api/paypal/status` | *(optional)* Check PayPal configuration |
  
 Tenant-scoped endpoints read the `X-Tenant-ID` header (defaults to `default`).
- 
+
+## Deployment
+
+### Backend — HuggingFace Spaces (Python SDK, free)
+
+The backend is configured as a **Python SDK** Space (the `sdk: python` SDK is free; the Docker SDK is paid). It runs `app.py` which launches uvicorn on port `7860`.
+
+1. Go to [huggingface.co/new-space](https://huggingface.co/new-space) and create a Space:
+   - **Space name:** e.g. `gst-saathi`
+   - **SDK:** `Python`
+   - **Visibility:** Public or Private
+2. In the Space, go to **Settings → Repository** and connect your GitHub repo, or push the `backend/` directory contents directly to the Space repo.
+3. Make sure `backend/app.py`, `backend/requirements.txt`, and `backend/README.md` are at the repo root targeted by the Space.
+4. The Space builds and runs automatically. Your backend URL becomes:
+   ```
+   https://<your-username>-gst-saathi.hf.space
+   ```
+5. Health check: `GET https://<your-username>-gst-saathi.hf.space/api/health`
+
+> **OCR caveat:** the Python SDK Space does not install the `tesseract` system binary, so uploads that need OCR (scanned PDFs and JPG/PNG/TIFF images) may fail. **Pasted text** and **text-based PDFs** work fine. For full OCR support you'd need the Docker SDK (paid) or a different host.
+
+### Frontend — Vercel (already deployed)
+
+```bash
+cd frontend
+vercel deploy
+```
+
+Set the `NEXT_PUBLIC_BACKEND_URL` environment variable in Vercel to your HuggingFace Space URL:
+
+```
+NEXT_PUBLIC_BACKEND_URL=https://<your-username>-gst-saathi.hf.space
+```
+
+Then redeploy the frontend so it points at the hosted backend.
+
 ## Demo
  
 - Pitch video: _add link before submission_
